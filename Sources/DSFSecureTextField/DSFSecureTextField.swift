@@ -170,10 +170,12 @@ private extension DSFSecureTextField {
 		if self.displayToggleButton {
 			if self.allowPasswordInPlainText {
 				newCell = (self.visibility == .plainText) ? DSFPlainTextFieldCell() : DSFSecureTextFieldCell()
+				newCell.focusRingType = .none
 				self.cell = newCell
 			}
 			else {
 				newCell = NSSecureTextFieldCell()
+				newCell.focusRingType = .none
 				self.cell = newCell
 			}
 		}
